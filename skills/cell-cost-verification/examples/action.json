@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "action_id": "CR_CATHODE_001",
+  "name": "六系正极低成本材料替换",
+  "status": "COLD_START",
+  "evidence_level": "knowledge_only",
+  "source_refs": [
+    {
+      "source_type": "wiki",
+      "source_id": "WIKI_EXAMPLE_001"
+    },
+    {
+      "source_type": "go_element",
+      "source_id": "GO_EXAMPLE_001"
+    }
+  ],
+  "applicability": {
+    "cathode_family": [
+      "NCM6"
+    ],
+    "required_base_fields": [
+      "AGG.cathode.material_1"
+    ]
+  },
+  "operations": [
+    {
+      "op": "replace",
+      "field_path": "AGG.cathode.material_1",
+      "expected_old_value": "MAT_OLD_PLACEHOLDER",
+      "new_value": "MAT_NEW_PLACEHOLDER"
+    }
+  ],
+  "validation": {
+    "schema_status": "EXAMPLE_ONLY",
+    "crd_status": "NOT_RUN",
+    "soft_constraint_status": "NOT_RUN",
+    "risk_flags": []
+  },
+  "cost_estimation": {
+    "mode": "directional_only",
+    "delta_pct": null,
+    "evidence_refs": []
+  },
+  "risk_refs": [
+    "RISK_CYCLE_EXAMPLE",
+    "RISK_GAS_EXAMPLE"
+  ],
+  "historical_cases": [],
+  "experimental_outcomes": {
+    "success": 0,
+    "failure": 0
+  },
+  "note": "所有AGG路径、材料编码、Wiki/GO引用均为占位符；必须映射到真实业务数据后重新校验。"
+}
